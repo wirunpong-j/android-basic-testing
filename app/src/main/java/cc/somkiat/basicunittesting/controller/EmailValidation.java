@@ -1,5 +1,7 @@
 package cc.somkiat.basicunittesting.controller;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
 import cc.somkiat.basicunittesting.custom.EmailValidationException;
 import cc.somkiat.basicunittesting.model.ExceptionModel;
 
@@ -26,7 +28,7 @@ public class EmailValidation {
     }
 
     private void emailNotContainAtSign(String email) throws EmailValidationException {
-        if (!email.contains("@")) {
+        if (!EmailValidator.getInstance().isValid(email)) {
             throw new EmailValidationException("Email not contain @.");
         }
     }
