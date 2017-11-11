@@ -67,4 +67,11 @@ public class NameValidationFailTest {
         boolean result = validation.validate("bellkung");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void secondLetterOnwardsIsUpperCase() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate("BELlkunG");
+        Assert.assertFalse(result);
+    }
 }
