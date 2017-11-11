@@ -31,6 +31,12 @@ public class NameValidationFailTest {
         NameValidation validation = new NameValidation();
         boolean result = validation.validate("Bell");
         Assert.assertFalse(result);
+    }
 
+    @Test
+    public void nameIsMoreThanFifteen() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate("TachibanaMakotoa");
+        Assert.assertFalse(result);
     }
 }
