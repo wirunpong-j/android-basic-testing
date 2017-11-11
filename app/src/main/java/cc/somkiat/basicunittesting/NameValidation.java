@@ -21,6 +21,7 @@ class NameValidation {
 
             isNull(name);
             isEmpty(name);
+            isLessThanFive(name);
 
         } catch (NameValidateException exception) {
             exceptionClass.setMessage(exception.getMessage());
@@ -38,6 +39,12 @@ class NameValidation {
     private void isNull(String name) throws NameValidateException {
         if(name == null) {
             throw new NameValidateException("Name is Null");
+        }
+    }
+
+    private void isLessThanFive(String name) throws NameValidateException {
+        if(name.length() < 5) {
+            throw new NameValidateException("Name is less than 5.");
         }
     }
 
