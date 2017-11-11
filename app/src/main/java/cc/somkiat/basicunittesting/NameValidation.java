@@ -24,6 +24,7 @@ class NameValidation {
 
             isNull(name);
             isEmpty(name);
+            isContainSpace(name);
             isLessThanFive(name);
             isMoreThanFifteen(name);
             isContainNumber(name);
@@ -72,6 +73,12 @@ class NameValidation {
 
         if (matcher.find()) {
             throw new NameValidateException("Name contain special character.");
+        }
+    }
+
+    private void isContainSpace(String name) throws NameValidateException {
+        if (name.contains(" ")) {
+            throw new NameValidateException("Name contain space.");
         }
     }
 
