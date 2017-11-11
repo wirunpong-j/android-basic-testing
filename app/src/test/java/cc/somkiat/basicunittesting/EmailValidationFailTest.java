@@ -17,6 +17,12 @@ public class EmailValidationFailTest {
         boolean result = validation.validate("bell-kunghotmail.com");
         Assert.assertFalse(result);
     }
-    
+
+    @Test
+    public void emailContainMoreAtSign() {
+        EmailValidation validation = new EmailValidation();
+        boolean result = validation.validate("bell-kung@@@hotmail.com");
+        Assert.assertFalse(result);
+    }
 
 }
