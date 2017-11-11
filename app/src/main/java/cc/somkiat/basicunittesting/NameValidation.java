@@ -19,7 +19,7 @@ class NameValidation {
 
             isEmpty(name);
 
-        } catch (Exception e) {
+        } catch (NameValidateException e) {
             exception.setMessage(e.getMessage());
             return false;
         }
