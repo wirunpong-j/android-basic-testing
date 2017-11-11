@@ -1,10 +1,9 @@
-package cc.somkiat.basicunittesting.controller;
+package cc.somkiat.basicunittesting.model;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import cc.somkiat.basicunittesting.custom.NameValidateException;
-import cc.somkiat.basicunittesting.model.ExceptionModel;
 
 /**
  * Created by BellKunG on 10/11/2017 AD.
@@ -13,6 +12,9 @@ import cc.somkiat.basicunittesting.model.ExceptionModel;
 public class NameValidation {
 
     private ExceptionModel exceptionClass;
+
+    public NameValidation() {
+    }
 
     public boolean validate(String name) {
 

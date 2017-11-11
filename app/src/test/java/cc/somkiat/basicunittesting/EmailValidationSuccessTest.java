@@ -3,7 +3,7 @@ package cc.somkiat.basicunittesting;
 import org.junit.Assert;
 import org.junit.Test;
 
-import cc.somkiat.basicunittesting.controller.EmailValidation;
+import cc.somkiat.basicunittesting.model.EmailValidation;
 
 /**
  * Created by BellKunG on 12/11/2017 AD.

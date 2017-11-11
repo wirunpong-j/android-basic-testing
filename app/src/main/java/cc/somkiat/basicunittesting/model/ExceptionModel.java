@@ -6,7 +6,6 @@ package cc.somkiat.basicunittesting.model;
 
 public class ExceptionModel {
     private String message;
-    private boolean result;
 
     public ExceptionModel() {
 
@@ -20,11 +19,4 @@ public class ExceptionModel {
         this.message = message;
     }
 
-    public boolean isResult() {
-        return result;
-    }
-
-    public void setResult(boolean result) {
-        this.result = result;
-    }
 }

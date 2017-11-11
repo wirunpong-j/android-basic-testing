@@ -1,4 +1,4 @@
-package cc.somkiat.basicunittesting.controller;
+package cc.somkiat.basicunittesting.model;
 
 import org.apache.commons.validator.routines.EmailValidator;
 
@@ -7,6 +7,9 @@ import org.apache.commons.validator.routines.EmailValidator;
  */
 
 public class EmailValidation {
+
+    public EmailValidation() {
+    }
 
     public boolean validate(String email) {
 

@@ -4,7 +4,7 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import cc.somkiat.basicunittesting.controller.NameValidation;
+import cc.somkiat.basicunittesting.model.NameValidation;
 
 
 /**
