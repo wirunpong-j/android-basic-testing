@@ -95,4 +95,11 @@ public class EmailValidationFailTest {
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void afterEmailFormContainNumber() {
+        EmailValidation validation = new EmailValidation();
+        boolean result = validation.validate("bell-kung@hotmail.com3");
+        Assert.assertFalse(result);
+    }
+
 }
