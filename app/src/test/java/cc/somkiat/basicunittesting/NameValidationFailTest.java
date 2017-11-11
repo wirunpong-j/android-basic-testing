@@ -25,4 +25,12 @@ public class NameValidationFailTest {
         boolean result = validation.validate(null);
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void nameIsLessThanFive() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate("Bell");
+        Assert.assertFalse(result);
+
+    }
 }
