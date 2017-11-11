@@ -46,4 +46,11 @@ public class EmailValidationFailTest {
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void afterDotContainSpecialCharacter() {
+        EmailValidation validation = new EmailValidation();
+        boolean result = validation.validate("bell-kung@hotmail.^com");
+        Assert.assertFalse(result);
+    }
+
 }
