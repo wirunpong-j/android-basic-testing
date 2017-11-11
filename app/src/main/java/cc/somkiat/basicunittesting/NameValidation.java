@@ -1,5 +1,7 @@
 package cc.somkiat.basicunittesting;
 
+import android.util.Log;
+
 import cc.somkiat.basicunittesting.custom.NameValidateException;
 import cc.somkiat.basicunittesting.model.ExceptionModel;
 
@@ -9,18 +11,19 @@ import cc.somkiat.basicunittesting.model.ExceptionModel;
 
 class NameValidation {
 
-    private ExceptionModel exception;
+    private ExceptionModel exceptionClass;
 
     public boolean validate(String name) {
 
-        this.exception = new ExceptionModel();
+        this.exceptionClass = new ExceptionModel();
 
         try {
 
+            isNull(name);
             isEmpty(name);
 
-        } catch (NameValidateException e) {
-            exception.setMessage(e.getMessage());
+        } catch (NameValidateException exception) {
+            exceptionClass.setMessage(exception.getMessage());
             return false;
         }
         return true;
@@ -32,7 +35,13 @@ class NameValidation {
         }
     }
 
-    public ExceptionModel getException() {
-        return exception;
+    private void isNull(String name) throws NameValidateException {
+        if(name == null) {
+            throw new NameValidateException("Name is Null");
+        }
+    }
+
+    public ExceptionModel getExceptionClass() {
+        return exceptionClass;
     }
 }
