@@ -14,7 +14,7 @@ public class EmailValidationFailTest {
     @Test
     public void emailNotContainAtSign() {
         EmailValidation validation = new EmailValidation();
-        boolean result = validation.validate();
+        boolean result = validation.validate("bell-kunghotmail.com");
         Assert.assertFalse(result);
     }
 }
