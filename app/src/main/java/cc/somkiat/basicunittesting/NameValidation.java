@@ -24,6 +24,7 @@ class NameValidation {
 
             isNull(name);
             isEmpty(name);
+            firstLetterIsLowercase(name);
             isContainSpace(name);
             isLessThanFive(name);
             isMoreThanFifteen(name);
@@ -79,6 +80,12 @@ class NameValidation {
     private void isContainSpace(String name) throws NameValidateException {
         if (name.contains(" ")) {
             throw new NameValidateException("Name contain space.");
+        }
+    }
+
+    private void firstLetterIsLowercase(String name) throws NameValidateException {
+        if (Character.isLowerCase(name.charAt(0))) {
+            throw new NameValidateException("First letter is lowercase.");
         }
     }
 
