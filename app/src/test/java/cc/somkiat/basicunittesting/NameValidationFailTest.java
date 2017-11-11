@@ -46,5 +46,11 @@ public class NameValidationFailTest {
         boolean result = validation.validate("Bell69");
         Assert.assertFalse(result);
     }
-    
+
+    @Test
+    public void nameContainSpecialCharacter() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate("Bell!@#$%^&{}");
+        Assert.assertFalse(result);
+    }
 }
