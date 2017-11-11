@@ -17,4 +17,6 @@ public class EmailValidationFailTest {
         boolean result = validation.validate("bell-kunghotmail.com");
         Assert.assertFalse(result);
     }
+    
+
 }
