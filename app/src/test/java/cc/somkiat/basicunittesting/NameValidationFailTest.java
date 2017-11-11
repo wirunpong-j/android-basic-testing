@@ -18,4 +18,11 @@ public class NameValidationFailTest {
         boolean result = validation.validate("");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void nameIsNull() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate(null);
+        Assert.assertFalse(result);
+    }
 }
