@@ -5,4 +5,7 @@ package cc.somkiat.basicunittesting.controller;
  */
 
 public class EmailValidation {
+    public boolean validate() {
+        return false;
+    }
 }
