@@ -67,4 +67,11 @@ public class EmailValidationFailTest {
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void domainNameContainSpecialCharacterWithoutDash() {
+        EmailValidation validation = new EmailValidation();
+        boolean result = validation.validate("bell-kung@hot*mail.com");
+        Assert.assertFalse(result);
+    }
+
 }
