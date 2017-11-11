@@ -60,4 +60,11 @@ public class NameValidationFailTest {
         boolean result = validation.validate("Bell KunG Desu");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void firstLetterIsLowerCase() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate("bellkung");
+        Assert.assertFalse(result);
+    }
 }
