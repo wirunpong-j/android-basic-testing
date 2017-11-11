@@ -25,6 +25,7 @@ class NameValidation {
             isNull(name);
             isEmpty(name);
             firstLetterIsLowercase(name);
+            secondLetterOnwardsIsUpperCase(name);
             isContainSpace(name);
             isLessThanFive(name);
             isMoreThanFifteen(name);
@@ -86,6 +87,14 @@ class NameValidation {
     private void firstLetterIsLowercase(String name) throws NameValidateException {
         if (Character.isLowerCase(name.charAt(0))) {
             throw new NameValidateException("First letter is lowercase.");
+        }
+    }
+
+    private void secondLetterOnwardsIsUpperCase(String name) throws NameValidateException {
+        for (int pos = 1; pos < name.length(); pos++) {
+            if (Character.isUpperCase(name.charAt(pos))) {
+                throw new NameValidateException("Second letter onwards is upperCase.");
+            }
         }
     }
 
