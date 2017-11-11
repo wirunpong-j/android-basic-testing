@@ -2,6 +2,9 @@ package cc.somkiat.basicunittesting;
 
 import android.util.Log;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import cc.somkiat.basicunittesting.custom.NameValidateException;
 import cc.somkiat.basicunittesting.model.ExceptionModel;
 
@@ -24,6 +27,7 @@ class NameValidation {
             isLessThanFive(name);
             isMoreThanFifteen(name);
             isContainNumber(name);
+            isContainSpecialCharacter(name);
 
         } catch (NameValidateException exception) {
             exceptionClass.setMessage(exception.getMessage());
@@ -59,6 +63,15 @@ class NameValidation {
     private void isContainNumber(String name) throws NameValidateException {
         if (name.matches(".*\\d+.*")) {
             throw new NameValidateException("Name contain number.");
+        }
+    }
+
+    private void isContainSpecialCharacter(String name) throws NameValidateException {
+        Pattern pattern = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(name);
+
+        if (matcher.find()) {
+            throw new NameValidateException("Name contain special character.");
         }
     }
 
