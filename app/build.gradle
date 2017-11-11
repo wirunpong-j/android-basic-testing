@@ -34,7 +34,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
     // Email Vadilator
-    compile 'commons-validator:commons-validator:1.4.1'
+    compile 'commons-validator:commons-validator:1.5.1'
 
     testImplementation 'junit:junit:4.12'
 

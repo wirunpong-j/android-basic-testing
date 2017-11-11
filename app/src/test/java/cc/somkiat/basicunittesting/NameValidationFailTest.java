@@ -58,7 +58,7 @@ public class NameValidationFailTest {
     @Test
     public void nameContainSpace() {
         NameValidation validation = new NameValidation();
-        boolean result = validation.validate("Bell KunG Desu");
+        boolean result = validation.validate("Bell kung desu");
         Assert.assertFalse(result);
     }
 
