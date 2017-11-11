@@ -54,10 +54,12 @@ public class EmailValidationFailTest {
     }
 
     @Test
-    public void usernameNotContainDoubleDot() {
+    public void usernameContainMoreThanOneDot() {
         EmailValidation validation = new EmailValidation();
         boolean result = validation.validate("be..ll-kung@hotmail.com");
         Assert.assertFalse(result);
     }
+
+    
 
 }
