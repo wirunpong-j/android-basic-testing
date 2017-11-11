@@ -23,6 +23,7 @@ class NameValidation {
             isEmpty(name);
             isLessThanFive(name);
             isMoreThanFifteen(name);
+            isContainNumber(name);
 
         } catch (NameValidateException exception) {
             exceptionClass.setMessage(exception.getMessage());
@@ -52,6 +53,12 @@ class NameValidation {
     private void isMoreThanFifteen(String name) throws NameValidateException {
         if(name.length() > 15) {
             throw new NameValidateException("Name is more than 15.");
+        }
+    }
+
+    private void isContainNumber(String name) throws NameValidateException {
+        if (name.matches(".*\\d+.*")) {
+            throw new NameValidateException("Name contain number.");
         }
     }
 

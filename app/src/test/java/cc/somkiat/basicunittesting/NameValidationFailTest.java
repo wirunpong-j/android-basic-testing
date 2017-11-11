@@ -46,4 +46,5 @@ public class NameValidationFailTest {
         boolean result = validation.validate("Bell69");
         Assert.assertFalse(result);
     }
+    
 }
