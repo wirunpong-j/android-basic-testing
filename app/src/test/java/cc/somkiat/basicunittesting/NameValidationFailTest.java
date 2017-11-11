@@ -53,4 +53,11 @@ public class NameValidationFailTest {
         boolean result = validation.validate("Bell!@#$%^&{}");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void nameContainSpace() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate("Bell KunG Desu");
+        Assert.assertFalse(result);
+    }
 }
