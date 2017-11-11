@@ -77,7 +77,7 @@ public class EmailValidationFailTest {
     @Test
     public void afterDotOnwardsContainNumber() {
         EmailValidation validation = new EmailValidation();
-        boolean result = validation.validate("bell-kung@hotmail.co3");
+        boolean result = validation.validate("bell-kung@hotmail.c3om");
         Assert.assertFalse(result);
     }
 
