@@ -39,4 +39,11 @@ public class NameValidationFailTest {
         boolean result = validation.validate("TachibanaMakotoa");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void nameContainNumber() {
+        NameValidation validation = new NameValidation();
+        boolean result = validation.validate("Bell69");
+        Assert.assertFalse(result);
+    }
 }
