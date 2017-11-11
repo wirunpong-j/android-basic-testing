@@ -4,6 +4,8 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+import cc.somkiat.basicunittesting.controller.NameValidation;
+
 /**
  * Created by BellKunG on 11/11/2017 AD.
  */

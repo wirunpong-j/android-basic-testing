@@ -1,6 +1,4 @@
-package cc.somkiat.basicunittesting;
-
-import android.util.Log;
+package cc.somkiat.basicunittesting.controller;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -12,7 +10,7 @@ import cc.somkiat.basicunittesting.model.ExceptionModel;
  * Created by BellKunG on 10/11/2017 AD.
  */
 
-class NameValidation {
+public class NameValidation {
 
     private ExceptionModel exceptionClass;
 
