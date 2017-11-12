@@ -63,9 +63,9 @@ Email Validation คือ การตรวจสอบการใส่ Emai
 
 #### เป็น Class ที่ใช้ทำ UI Test ด้วย Espresso โดยเมื่อ Test เสร็จสิ้นจะแสดง Toast ขึ้นมา
 
-- Case 1 - normalNameAndEmail : Check ว่า Name และ Email ที่ใส่เข้ามาต้องถูกรูปแบบของ Unit Test และต้องขึ้น Toast message ว่า ***"Success!!!"***
-- Case 2 - fillNameWithoutFillEmail : Check ว่าทำการใส่ Name แต่ไม่ใส่ Email เข้ามาจะต้องขึ้น Toast message ว่า ***"Email is not valid."*** เนื่องจาก Email ไม่ถูกรูปแบบจาก Case ใน Unit Test
-- Case 3 - fillEmailWithoutFillName : Check ว่าทำการใส่ Email แต่ไม่ใส่ Name เข้ามาจะต้องขึ้น Toast message ว่า ***"Name is Empty"*** เนื่องจาก Name ไม่ถูกรูปแบบจาก Case ใน Unit Test ใน method ที่ชื่อว่า ***"nameIsEmptyString"***
+- **Case 1 - normalNameAndEmail :** Check ว่า Name และ Email ที่ใส่เข้ามาต้องถูกรูปแบบของ Unit Test และต้องขึ้น Toast message ว่า ***"Success!!!"***
+- **Case 2 - fillNameWithoutFillEmail :** Check ว่าทำการใส่ Name แต่ไม่ใส่ Email เข้ามาจะต้องขึ้น Toast message ว่า ***"Email is not valid."*** เนื่องจาก Email ไม่ถูกรูปแบบจาก Case ใน Unit Test
+- **Case 3 - fillEmailWithoutFillName :** Check ว่าทำการใส่ Email แต่ไม่ใส่ Name เข้ามาจะต้องขึ้น Toast message ว่า ***"Name is Empty"*** เนื่องจาก Name ไม่ถูกรูปแบบจาก Case ใน Unit Test ใน method ที่ชื่อว่า ***"nameIsEmptyString"***
 
 
 
