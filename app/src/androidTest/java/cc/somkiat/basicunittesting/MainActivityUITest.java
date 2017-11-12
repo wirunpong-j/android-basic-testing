@@ -38,4 +38,12 @@ public class MainActivityUITest {
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         onView(withText("Success!!!")).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
+
+    @Test
+    public void fillNameWithoutFillEmail() {
+        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Bellkung"));
+        onView(withId(R.id.emailInput)).perform(scrollTo() ,replaceText(""));
+        onView(withId(R.id.saveButton)).perform(scrollTo(), click());
+        onView(withText("Email is not valid.")).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
 }
