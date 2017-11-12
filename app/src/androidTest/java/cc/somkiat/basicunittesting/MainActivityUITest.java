@@ -46,4 +46,13 @@ public class MainActivityUITest {
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         onView(withText("Email is not valid.")).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
+
+    @Test
+    public void fillEmailWithoutFillName() {
+        onView(withId(R.id.emailInput)).perform(scrollTo() ,replaceText("bell-kung@hotmail.com"));
+        onView(withId(R.id.saveButton)).perform(scrollTo(), click());
+        onView(withText("Name is Empty")).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+
 }
