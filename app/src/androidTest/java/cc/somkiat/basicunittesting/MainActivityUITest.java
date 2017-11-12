@@ -30,6 +30,7 @@ public class MainActivityUITest {
 
     @Test
     public void normalNameAndEmail() {
+        onView(withId(R.id.revertButton)).perform(scrollTo(), click());
         onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Bellkung"));
         onView(withId(R.id.emailInput)).perform(scrollTo() ,replaceText("bell-kung@hotmail.com"));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
@@ -38,6 +39,7 @@ public class MainActivityUITest {
 
     @Test
     public void fillNameWithoutFillEmail() {
+        onView(withId(R.id.revertButton)).perform(scrollTo(), click());
         onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Bellkung"));
         onView(withId(R.id.emailInput)).perform(scrollTo() ,replaceText(""));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
@@ -46,6 +48,7 @@ public class MainActivityUITest {
 
     @Test
     public void fillEmailWithoutFillName() {
+        onView(withId(R.id.revertButton)).perform(scrollTo(), click());
         onView(withId(R.id.emailInput)).perform(scrollTo() ,replaceText("bell-kung@hotmail.com"));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         onView(withText("Name is Empty")).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
